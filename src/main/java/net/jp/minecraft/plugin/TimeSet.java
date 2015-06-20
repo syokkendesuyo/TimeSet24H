@@ -76,7 +76,7 @@ public class TimeSet extends JavaPlugin implements Listener {
 		sender.sendMessage(ChatColor.UNDERLINE + "Auther : syokkendesuyo");
 		sender.sendMessage("");
 		sender.sendMessage(ChatColor.WHITE + "□ /ts help ：当プラグインのヘルプ");
-		sender.sendMessage(ChatColor.WHITE + "□ /ts <0～24> ：時間を*＾0から24時に設定します");
+		sender.sendMessage(ChatColor.WHITE + "□ /ts <0～24> ：時間を0から24時に設定します");
 		sender.sendMessage(ChatColor.YELLOW + "＝＝＝＝＝ ＝＝＝＝＝ ＝＝＝＝＝");
 		sender.sendMessage("");
 	}
