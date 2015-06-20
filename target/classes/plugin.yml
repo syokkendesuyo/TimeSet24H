@@ -1,0 +1,14 @@
+name: TimeSet24H
+version: 0.0.1
+main: net.jp.minecraft.plugin.TimeSet
+commands:
+    ts:
+        description: TimeSet24H
+        usage: /ts
+        permission: ts.use
+        permission-message: You don't have permission (ts.use)
+permissions:
+    ts.use:
+        description: Allow TimeSet24H command.
+        default: op
+
