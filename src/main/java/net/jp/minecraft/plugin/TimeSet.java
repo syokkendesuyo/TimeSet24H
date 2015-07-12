@@ -32,17 +32,21 @@ public class TimeSet extends JavaPlugin implements Listener {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (cmd.getName().equalsIgnoreCase("ts")){
-			// /ts time world
-			//     args[0] args[1]
 			if(args.length == 0){
-				help(sender , cmd);
+				help(sender);
+				return true;
+			}
+			else if(args.length == 1){
+				if(args[0].equalsIgnoreCase("help")){
+					help(sender);
+				}
 				return true;
 			}
 			else if(args.length >2){
 				sender.sendMessage(ChatColor.RED + "□ 引数が多すぎます。/ts <0-24> <WorldName>");
 				return true;
 			}
-			//Boolean型を用意
+			//コマンドの引数が0または2以上以外の場合以下の処理へ
 			Boolean tf = true;
 			if(isNumber(args[0]) == tf){
 				int time = Integer.parseInt(args[0]);
@@ -88,13 +92,16 @@ public class TimeSet extends JavaPlugin implements Listener {
 		}
 		return false;
 	}
-	public void help(CommandSender sender , Command cmd){
+	public void help(CommandSender sender){
 		sender.sendMessage("");
 		sender.sendMessage(ChatColor.YELLOW + "＝＝＝＝＝ TimeSet24H ＝＝＝＝＝");
 		sender.sendMessage(ChatColor.UNDERLINE + "Auther : syokkendesuyo");
 		sender.sendMessage("");
 		sender.sendMessage(ChatColor.WHITE + "□ /ts help ：当プラグインのヘルプ");
-		sender.sendMessage(ChatColor.WHITE + "□ /ts <0～24> ：時間を0から24時に設定します");
+		sender.sendMessage(ChatColor.WHITE + "□ /ts <0～24> <WorldName> ：時間を変更します");
+		if(sender instanceof ConsoleCommandSender){
+			sender.sendMessage(ChatColor.WHITE + " * コンソールからの場合<WorldName>は必須");
+		}
 		sender.sendMessage(ChatColor.YELLOW + "＝＝＝＝＝ ＝＝＝＝＝ ＝＝＝＝＝");
 		sender.sendMessage("");
 	}

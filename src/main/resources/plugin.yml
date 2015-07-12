@@ -1,5 +1,5 @@
 name: TimeSet24H
-version: 0.0.2
+version: 0.0.3
 main: net.jp.minecraft.plugin.TimeSet
 commands:
     ts:
