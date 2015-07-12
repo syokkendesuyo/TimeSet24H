@@ -4,6 +4,7 @@
 .mtj.tmp/
 
 # Package Files #
+*.jar
 *.war
 *.ear
 
@@ -41,9 +42,6 @@ Temporary Items
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
-.classpath
-.project
-.settings
 
 # Folder config file
 Desktop.ini
@@ -59,7 +57,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-.settings
-.classpath
-.ptoject
